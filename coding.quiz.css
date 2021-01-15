@@ -1,0 +1,10 @@
+#webBody{
+    background-color: lightgray;
+    font-family: 'Raleway', sans-serif;
+}
+
+#container {
+align-content: center;
+position: absolute;
+border: solid 5px royalblue;
+}
