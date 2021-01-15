@@ -7,4 +7,22 @@
 align-content: center;
 position: absolute;
 border: solid 5px royalblue;
+left: 36%;
+top: 20%;
+width: 550px;
+height: 550px;
+border-radius: 15px;
+text-align: center;
+}
+
+#questionsDiv {
+margin: 20px;
+}
+
+#startQuiz{
+    background-color: royalblue;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
 }
