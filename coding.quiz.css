@@ -31,3 +31,10 @@ margin: 20px;
     color: lightgray;
 }
 
+#highScores {
+    background-color: #000080;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+border-radius: 10px;
+}
