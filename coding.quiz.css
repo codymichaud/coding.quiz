@@ -1,12 +1,12 @@
 #webBody{
-    background-color: lightgray;
+    background-color: #E6E6FA;
     font-family: 'Raleway', sans-serif;
 }
 
 #container {
 align-content: center;
 position: absolute;
-border: solid 5px royalblue;
+border: solid 5px #000080;
 left: 36%;
 top: 20%;
 width: 550px;
@@ -20,9 +20,14 @@ margin: 20px;
 }
 
 #startQuiz{
-    background-color: royalblue;
+    background-color: #000080;
     padding: 15px 32px;
     font-size: 20px;
     color: white;
     border-radius: 10px;
 }
+
+#startQuiz:hover, #highcores:hover{
+    color: lightgray;
+}
+
