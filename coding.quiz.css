@@ -43,10 +43,23 @@ border-radius: 10px;
     background-color: #000080;
     position: relative;
     padding: 10px;
+    font-size: 20px;
+    color: white;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    
 }
 
 #clear{
     background-color: #000080;
     position: relative;
     padding: 10px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    width:auto;
+    text-align: center;
+    text-decoration: none;
 }
