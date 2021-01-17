@@ -38,3 +38,15 @@ margin: 20px;
     color: white;
 border-radius: 10px;
 }
+
+#goBack{
+    background-color: #000080;
+    position: relative;
+    padding: 10px;
+}
+
+#clear{
+    background-color: #000080;
+    position: relative;
+    padding: 10px;
+}
