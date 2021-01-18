@@ -1,4 +1,4 @@
-//10 questions 10 points each
+//5 questions 20 points each
 //Lose 5 points or seconds for each wrong answer
 
 var quizQuestions = [
@@ -8,6 +8,10 @@ var quizQuestions = [
         answer: "All of the above"
 
     },
+    {
+        question: "What is a very useful tool that is used during development, debugging and for printing content to the debugger:",
+        choices: ["Javascript", "Terminal / bash", "For loops", "console.log()"],
+        answer: "console.log()"
 
 
 
