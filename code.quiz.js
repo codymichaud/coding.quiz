@@ -117,5 +117,44 @@ function compare(event) {
 
 
 }
+//appends last page
+function allDone() {
+    questionsDiv.innerHTML = "";
+    currentTime.innerHTML = "";
+
+    //Heading for end of quiz
+    var createH1 = document.createElement("h1");
+    createH1.setAttribute("id", "createH1");
+    createH1.textContent = "All Done!!"
+
+    questionsDiv.appendChild(createH1);
+
+    //Paragraph for end of quiz
+    var createP = document.createElement("p");
+    createP.setAttribute("id", "createP");
+
+    questionsDiv.appendChild(createP);
+
+    //Calculates the remaining time and replaces it with score
+    if (secondsLeft >= 0) {
+        var timeRemaining = secondsLeft;
+        var createP2 = document.createElement("p");
+        clearInterval(holdInterval);
+        createP.textContent = "Your final score is: " + timeRemaining;
+        questionsDiv.appendChild(createP2);
+    }
+    //Label asking to enter intials
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter your intials for your score: ";
+
+    questionsDiv.appendChild(createLabel);
+
+    //Allows user to input intials into label
+    var createInput = document.createElement("input");
+    createInput.setAttribute("type", "text");
+    createInput.setAttribute("id", "initials");
+    createInput.textContent = ""
+}
 
 
