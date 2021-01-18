@@ -64,6 +64,19 @@ timer.addEventListener("click", function () {
     render(questionIndex);
 });
 
+//Displays questions and choices on to page
+function render(questionIndex) {
+    questionsDiv.innerHTML = "";
+    ulCreate.innerHTML = "";
+    //For loop to loop through the info int he array
+    for (var i = 0; i < quizQuestions.length; i++) {
+        //Appends the question title only
+        var userQuestion = quizQuestions[questionIndex].question;
+        var userChoices = quizQuestions[questionIndex].choices;
+        questionsDiv.textContent = userQuestion;
+    }
+
+}
 
 
 
