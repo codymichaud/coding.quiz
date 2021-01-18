@@ -154,7 +154,18 @@ function allDone() {
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
-    createInput.textContent = ""
+    createInput.textContent = "";
+
+    questionsDiv.appendChild(createInput);
+
+    //Allows user to submit their score with their initials to the high score sheet
+    var createSubmit = document.createElement("submit");
+    createSubmit.setAttribute("type", "submit");
+    createSubmit.setAttribute("id", "Submit");
+    createSubmit.textContent = "Submit";
+    questionsDiv.appendChild(createSubmit);
+
+
 }
 
 
