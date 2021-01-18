@@ -159,21 +159,23 @@ function allDone() {
     questionsDiv.appendChild(createInput);
 
     //Allows user to submit their score with their initials to the high score sheet
-    var createSubmit = document.createElement("submit");
+    var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
+
     questionsDiv.appendChild(createSubmit);
 
     //Adding event listener that will capture initials and local storage intitials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
+
         if (initials === null) {
             console.log("Dont forget your intials");
 
         } else {
             var finalScore = {
-                intitials: intitials,
+                initials: initials,
                 userScore: timeRemaining
             }
             console.log(finalScore);
