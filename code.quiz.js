@@ -75,9 +75,47 @@ function render(questionIndex) {
         var userChoices = quizQuestions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
+    // New ul for each question choices
+    userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questionsDiv.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+}
+//event to compare choices with the answer
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        //Correct answer condition
+        if (element.textContent == quizQuestions[questionIndex].answer) {
+            userScore++;
+            createDiv.textContent = "You got it!! The answer is:  " + quizQuestions[questionIndex].answer;
+
+        } //Wrong answer condition
+        else {
+            //Will deduct 5 seconds off secondsLeft for wrong answers
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "Wrong answer!! The correct answer is:  " + quizQuestions[questionIndex].answer;
+        }
+    }
+    //Determines what question the user is on
+    questionIndex++;
+
+    if (questionIndex >= quizQuestions.length) {
+        //allDone will append the user stats on the last page
+        allDone();
+        createDiv.textContent = "You finished the quiz!!" + " " + "You got  " + userScore + "/" + quizQuestions.length + "correct!!";
+    } else {
+        render(questionIndex);
+    }
+    questionsDiv.appendChild(createDiv);
+
 
 }
-
-
 
 
