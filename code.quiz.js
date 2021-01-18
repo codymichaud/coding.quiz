@@ -165,6 +165,31 @@ function allDone() {
     createSubmit.textContent = "Submit";
     questionsDiv.appendChild(createSubmit);
 
+    //Adding event listener that will capture initials and local storage intitials and score
+    createSubmit.addEventListener("click", function () {
+        var initials = createInput.value;
+        if (initials === null) {
+            console.log("Dont forget your intials");
+
+        } else {
+            var finalScore = {
+                intitials: intitials,
+                userScore: timeRemaining
+            }
+            console.log(finalScore);
+            var allScores = localStorage.getItem("allScores");
+            if (allScores === null) {
+                allScores = [];
+            } else {
+                allScores = JSON.parse(allScores);
+            }
+            allScores.push(finalScore);
+            var newScore = JSON.stringify(allScores);
+            localStorage.setItem("allScores", newScore);
+            //Sends user to final page
+            window.location.replace("./highScores.html")
+        }
+    });
 
 }
 
