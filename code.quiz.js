@@ -33,19 +33,37 @@ var quizQuestions = [
 var userScore = 0;
 var questionIndex = 0;
 
-var = currentTime = document.querySelector("#currentTime");
+var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startQuiz");
 var questionsDiv = document.querySelector("#questionsDiv");
 var container = document.querySelector("#container");
 
 //Timer of 20 seconds per questions
-var = secondsLeft = 100;
+var secondsLeft = 100;
 //Holds interval time
 var holdInterval = 0;
 //Holds penalty time
 var penalty = 5;
 //Creates new element for ul choices list
 var ulCreate = document.createElement("ul");
+
+//When start quiz button clicked starts timer
+timer.addEventListener("click", function () {
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function () {
+            secondsLeft--;
+            currentTime.textContent = "Time: " + secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(holdInterval);
+                allDone();
+                currentTime.textContent = " Time's up!!";
+            }
+        }, 1000);
+    }
+    render(questionIndex);
+});
+
 
 
 
