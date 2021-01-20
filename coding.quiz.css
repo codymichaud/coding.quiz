@@ -115,7 +115,7 @@ li {
 
 }
 
-/* Media queries*/
+/*Sizing for screen sizes of 786px and 640px
 
 @media screen and (max-width: 786px) {
     /* Resized content to fit 786px  */
