@@ -27,7 +27,7 @@ margin: 20px;
     border-radius: 10px;
 }
 
-#startQuiz:hover, #highcores:hover {
+#startQuiz:hover, #highScores:hover, #submit:hover, li:hover, #goBack:hover, #clear:hover {
     color: lightgray;
 }
 
@@ -115,7 +115,7 @@ li {
 
 }
 
-/*Sizing for screen sizes of 786px and 640px
+/*Sizing for screen sizes of 786px and 640px*/
 
 @media screen and (max-width: 786px) {
     /* Resized content to fit 786px  */
