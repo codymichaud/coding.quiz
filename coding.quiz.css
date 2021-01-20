@@ -134,13 +134,13 @@ li {
         #goBack {
             
             position: relative;
-            left: 55%;
+            text-align: center;
         }
 
         #clear {
             
             position: relative;
-            right: 5%;
+            text-align: center;
             
         }
     }
@@ -156,9 +156,7 @@ li {
         position: absolute;
         left: 10%;
     }
-      a {
-          margin-left: 10%;
-      }
+      
 
      
 }
