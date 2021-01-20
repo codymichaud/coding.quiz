@@ -125,12 +125,9 @@ li {
     /* Resized main-content to fit 786px  */
     #container {
         position: absolute;
-        left: 20%;
+        
     }
 
-    a {
-        margin-left: 20%;
-    }
         #goBack {
             
             position: relative;
@@ -154,7 +151,7 @@ li {
     /* Resized main-content to fit 640px  */
     #container{
         position: absolute;
-        left: 10%;
+        
     }
       
 
